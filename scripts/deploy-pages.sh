@@ -29,7 +29,7 @@ ok=0
 for i in 1 2 3 4 5; do
   echo "--- 推送尝试 $i ---"
   if git -c credential.helper= -c http.version=HTTP/1.1 -c http.postBuffer=524288000 \
-      push "https://Newhgg:${GH_TOKEN}@github.com/${REPO}.git" gh-pages:gh-pages; then
+      push -f "https://Newhgg:${GH_TOKEN}@github.com/${REPO}.git" gh-pages:gh-pages; then
     ok=1; break
   fi
   sleep 8

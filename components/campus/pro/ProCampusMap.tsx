@@ -15,12 +15,14 @@ const ProScene = dynamic(() => import('./ProScene'), {
   ),
 })
 
-// 进阶版容器：持有昼/夜、旋转、选中三份状态，分发给 3D 场景与 DOM 覆盖层
-// 数据流：点击建筑 → ProScene onSelect → selected → 相机推近 + ProOverlay 面板
+// 进阶版容器：昼夜/旋转/选中/内外模式/楼层 五份状态，分发给 3D 场景与 DOM 覆盖层
+// 数据流：点楼 → selected → 推近+面板；走进大楼 → mode=inside → 室内切片；floor → 楼层升降
 export default function ProCampusMap() {
   const [isNight, setIsNight] = useState(true)
   const [autoRotate, setAutoRotate] = useState(true)
   const [selected, setSelected] = useState<BuildingId | null>(null)
+  const [mode, setMode] = useState<'outside' | 'inside'>('outside')
+  const [floor, setFloor] = useState(1)
 
   return (
     <div className="relative h-full w-full">
@@ -29,6 +31,8 @@ export default function ProCampusMap() {
         autoRotate={autoRotate}
         selected={selected}
         onSelect={(id) => setSelected((s) => (s === id ? null : id))}
+        mode={mode}
+        floor={floor}
       />
       <ProOverlay
         isNight={isNight}
@@ -37,6 +41,14 @@ export default function ProCampusMap() {
         onToggleRotate={() => setAutoRotate((v) => !v)}
         selected={selected}
         onClose={() => setSelected(null)}
+        inside={mode === 'inside'}
+        onEnterInside={() => {
+          setFloor(1)
+          setMode('inside')
+        }}
+        onExitInside={() => setMode('outside')}
+        floor={floor}
+        onFloorChange={setFloor}
       />
     </div>
   )

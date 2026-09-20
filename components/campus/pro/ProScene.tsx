@@ -5,6 +5,8 @@ import { OrbitControls, Sky, Stars } from '@react-three/drei'
 import type { BuildingId } from '@/lib/campus-config'
 import { BUILDINGS } from '@/lib/campus-config'
 import CameraRig from './CameraRig'
+import InteriorRig from './InteriorRig'
+import InteriorRoom from './InteriorRoom'
 import Effects from './Effects'
 import ProBuilding from './ProBuilding'
 import { Pond, Students, Tree } from './Extras'
@@ -31,12 +33,15 @@ interface ProSceneProps {
   autoRotate: boolean
   selected: BuildingId | null
   onSelect: (id: BuildingId) => void
+  mode: 'outside' | 'inside'
+  floor: number
 }
 
-// 进阶版 3D 校园：昼夜切换 + Bloom 辉光 + 镜头导演 + 行人/湖面/树
-// 数据流：ProCampusMap 状态 → ProScene 分发 → 建筑 onSelect 回传选中态
-export default function ProScene({ isNight, autoRotate, selected, onSelect }: ProSceneProps) {
+// 进阶版 3D 校园：室外（昼夜/Bloom/行人/湖面）+ 室内（走进大楼/楼层切片）
+// 数据流：ProCampusMap 状态 → 场景分发；点击建筑 onSelect → 相机推近+面板；走进大楼 → 室内切片
+export default function ProScene({ isNight, autoRotate, selected, onSelect, mode, floor }: ProSceneProps) {
   const sel = BUILDINGS.find((b) => b.id === selected) ?? null
+  const inside = mode === 'inside' && !!sel
   const bg = isNight ? '#070b1c' : '#a8d8f0'
 
   return (
@@ -63,48 +68,57 @@ export default function ProScene({ isNight, autoRotate, selected, onSelect }: Pr
         </>
       )}
 
-      {/* 草地 + 广场 + 步道 */}
-      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]}>
-        <circleGeometry args={[17, 48]} />
-        <meshStandardMaterial color={isNight ? '#16321f' : '#2f7a3c'} />
-      </mesh>
-      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.005, 0]}>
-        <circleGeometry args={[2.3, 32]} />
-        <meshStandardMaterial color={isNight ? '#223047' : '#9aa7b8'} />
-      </mesh>
-      {BUILDINGS.map((b) => {
-        const [x, , z] = b.position
-        return (
-          <mesh
-            key={b.id}
-            receiveShadow
-            position={[x * 0.5, 0.02, z * 0.5]}
-            rotation={[0, Math.atan2(x, z), 0]}
-          >
-            <boxGeometry args={[1.2, 0.04, Math.hypot(x, z) - 2.8]} />
-            <meshStandardMaterial color={isNight ? '#334155' : '#8b96a5'} />
+      {inside && sel ? (
+        /* ===== 室内模式：楼层切片 + 室内镜头 ===== */
+        <>
+          <InteriorRoom building={sel} floor={floor} isNight={isNight} />
+          <InteriorRig floor={floor} />
+        </>
+      ) : (
+        /* ===== 室外模式：校园全景 ===== */
+        <>
+          {/* 草地 + 广场 + 步道 */}
+          <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]}>
+            <circleGeometry args={[17, 48]} />
+            <meshStandardMaterial color={isNight ? '#16321f' : '#2f7a3c'} />
           </mesh>
-        )
-      })}
+          <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.005, 0]}>
+            <circleGeometry args={[2.3, 32]} />
+            <meshStandardMaterial color={isNight ? '#223047' : '#9aa7b8'} />
+          </mesh>
+          {BUILDINGS.map((b) => {
+            const [x, , z] = b.position
+            return (
+              <mesh
+                key={b.id}
+                receiveShadow
+                position={[x * 0.5, 0.02, z * 0.5]}
+                rotation={[0, Math.atan2(x, z), 0]}
+              >
+                <boxGeometry args={[1.2, 0.04, Math.hypot(x, z) - 2.8]} />
+                <meshStandardMaterial color={isNight ? '#334155' : '#8b96a5'} />
+              </mesh>
+            )
+          })}
 
-      {/* 环境：湖 / 树 / 路灯 / 中央 AI 八面体 / 行人 */}
-      <Pond isNight={isNight} />
-      {TREES.map((p, i) => (
-        <Tree key={i} position={p} variant={i} />
-      ))}
-      {LAMPS.map((p, i) => (
-        <LampPost key={i} position={p} />
-      ))}
-      <CenterPiece />
-      <Students />
+          {/* 湖 / 树 / 路灯 / 中央 AI 八面体 / 行人 / 三栋楼 */}
+          <Pond isNight={isNight} />
+          {TREES.map((p, i) => (
+            <Tree key={i} position={p} variant={i} />
+          ))}
+          {LAMPS.map((p, i) => (
+            <LampPost key={i} position={p} />
+          ))}
+          <CenterPiece />
+          <Students />
+          {BUILDINGS.map((b) => (
+            <ProBuilding key={b.id} config={b} isNight={isNight} selected={selected === b.id} onSelect={onSelect} />
+          ))}
+        </>
+      )}
 
-      {/* 三栋进阶版建筑 */}
-      {BUILDINGS.map((b) => (
-        <ProBuilding key={b.id} config={b} isNight={isNight} selected={selected === b.id} onSelect={onSelect} />
-      ))}
-
-      {/* 镜头导演 + 相机控制 + 后期辉光 */}
-      <CameraRig selectedPos={sel ? sel.position : null} />
+      {/* 镜头导演（室外）+ 相机控制 + 后期辉光 */}
+      <CameraRig selectedPos={sel && !inside ? sel.position : null} active={!inside} />
       <OrbitControls
         makeDefault
         enablePan={false}

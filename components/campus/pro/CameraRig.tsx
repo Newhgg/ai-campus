@@ -9,31 +9,37 @@ import * as THREE from 'three'
 const INTRO_FROM = new THREE.Vector3(30, 17, 34)
 const OVERVIEW = new THREE.Vector3(10, 6.8, 12)
 
-// 相机导演：开场飞行 2.2s → 点击建筑推近 → 关闭面板回到全景
-// 数据流：selected 变化 → 目标机位/注视点 → useFrame 逐帧 lerp
-export default function CameraRig({ selectedPos }: { selectedPos: [number, number, number] | null }) {
+// 相机导演（室外）：开场飞行 2.2s → 点击建筑推近 → 关闭面板回到全景
+// active=false 时挂起（室内模式由 InteriorRig 接管相机）
+export default function CameraRig({
+  selectedPos,
+  active = true,
+}: {
+  selectedPos: [number, number, number] | null
+  active?: boolean
+}) {
   const controls = useThree((s) => s.controls) as unknown as OrbitControlsImpl | null
   const camera = useThree((s) => s.camera)
   const intro = useRef(0)
   const camGoal = useRef(OVERVIEW.clone())
   const tgtGoal = useRef(new THREE.Vector3(0, 1.2, 0))
 
-  // 入场动画期间禁止手动操作
+  // 室外模式恢复轨道控制；室内模式交出相机
   useEffect(() => {
-    if (controls) controls.enabled = false
-  }, [controls])
+    if (controls) controls.enabled = active
+  }, [controls, active])
 
   useFrame((_, delta) => {
+    if (!active || !controls) return
     // 阶段一：飞入
     if (intro.current < 1) {
       intro.current = Math.min(1, intro.current + delta / 2.2)
       const e = 1 - Math.pow(1 - intro.current, 3)
       camera.position.lerpVectors(INTRO_FROM, OVERVIEW, e)
       camera.lookAt(0, 1, 0)
-      if (intro.current >= 1 && controls) controls.enabled = true
+      if (intro.current >= 1) controls.enabled = true
       return
     }
-    if (!controls) return
     // 阶段二：注视目标平滑切换
     if (selectedPos) {
       const dir = new THREE.Vector3(selectedPos[0], 0, selectedPos[2]).normalize()

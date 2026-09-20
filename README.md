@@ -33,7 +33,8 @@ app/
     ├── health/route.ts   ← 健康检查
     └── learning/chat/    ← 问答接口（当前为流式占位，RAG 由团队实装）
 components/
-├── campus/               ← 3D 场景（CampusScene / Building / Windows / decorations）
+├── campus/               ← 经典版 3D 场景（CampusScene / Building / Windows / decorations）
+├── campus/pro/           ← 进阶版 3D 演示（/pro：Bloom 辉光/昼夜切换/镜头导演/行人/湖面）
 ├── BuildingPage.tsx      ← 楼层页通用骨架
 └── ui/                   ← shadcn/ui 风格组件（button / card / badge）
 lib/campus-config.ts      ← 三栋楼单一数据源（3D/首页/楼层页共用）

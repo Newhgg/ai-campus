@@ -12,14 +12,16 @@ interface WindowsProps {
   height: number
   depth: number
   flicker?: boolean
+  /** 白天=false：窗户变暗色玻璃；默认 true 夜景亮灯（经典版不受影响） */
+  night?: boolean
 }
 
 // 窗户网格：贴在楼体四个侧面；(r+c+面序号)%3 决定亮灭，宿舍楼 flicker=true 时按正弦随机闪烁
-export default function Windows({ width, height, depth, flicker }: WindowsProps) {
+export default function Windows({ width, height, depth, flicker, night = true }: WindowsProps) {
   const group = useRef<THREE.Group>(null)
 
   useFrame(({ clock }) => {
-    if (!flicker || !group.current) return
+    if (!night || !flicker || !group.current) return
     group.current.children.forEach((child, i) => {
       const mat = (child as THREE.Mesh).material as THREE.MeshStandardMaterial
       mat.emissiveIntensity = Math.sin(clock.elapsedTime * 1.5 + i * 2.7) > 0 ? 1 : 0.1
@@ -54,9 +56,9 @@ export default function Windows({ width, height, depth, flicker }: WindowsProps)
         <mesh key={w.key} position={w.pos} rotation={[0, w.rotY, 0]}>
           <planeGeometry args={[0.22, 0.3]} />
           <meshStandardMaterial
-            color={w.lit ? '#fde68a' : '#1e293b'}
-            emissive={w.lit ? '#fbbf24' : '#000000'}
-            emissiveIntensity={w.lit ? 1 : 0}
+            color={night ? (w.lit ? '#fde68a' : '#1e293b') : '#3a4d63'}
+            emissive={night && w.lit ? '#fbbf24' : '#000000'}
+            emissiveIntensity={night && w.lit ? 1 : 0}
           />
         </mesh>
       ))}

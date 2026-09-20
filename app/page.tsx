@@ -17,6 +17,14 @@ export default function Home() {
         </Badge>
         <h1 className="text-3xl font-bold sm:text-4xl">AI 校园·三栋楼智能平台</h1>
         <p className="mt-2 text-sm text-slate-400">拖拽旋转 3D 校园，点击建筑进入对应楼层 —— 学习楼 / 宿舍楼 / 办公楼</p>
+        <div className="mt-4">
+          <Link
+            href="/pro"
+            className="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-4 py-1.5 text-sm text-cyan-300 hover:bg-cyan-500/20"
+          >
+            🚀 进阶版 3D 校园（Bloom 辉光 / 昼夜切换 / 行人）
+          </Link>
+        </div>
       </header>
 
       {/* 3D 校园 */}

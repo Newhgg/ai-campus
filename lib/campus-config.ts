@@ -55,7 +55,7 @@ export const BUILDINGS: BuildingConfig[] = [
       { title: '用电安全监测', desc: '功率阈值规则引擎 + AI 异常检测', tech: '规则引擎 + AI', owner: '黄锦浩' },
       { title: '归寝提醒 Agent', desc: '定时触发归寝提醒并推送通知', tech: '定时任务 + 推送', owner: '黄锦浩' },
       { title: '室友互动', desc: '宿舍群聊 + AI 话题推荐活跃气氛', tech: '聊天 + AI 推荐', owner: '叶奕辉' },
-      { title: '宿舍公告', desc: '楼栋通知发布与已读追踪', tech: '通知系统', owner: '黄圣贤' },
+      { title: '宿舍公告', desc: '楼栋通知发布与已读追踪', tech: '通知系统', owner: '黄胜贤' },
     ],
   },
   {
@@ -69,11 +69,11 @@ export const BUILDINGS: BuildingConfig[] = [
     floors: 3,
     tagline: '通知中心 · 资料收集 · AI 写作',
     features: [
-      { title: '通知中心', desc: '消息推送与已读状态追踪', tech: '消息系统', owner: '黄圣贤' },
-      { title: '资料收集', desc: '班级表单收集与数据管理', tech: '表单 + 数据', owner: '黄圣贤' },
+      { title: '通知中心', desc: '消息推送与已读状态追踪', tech: '消息系统', owner: '黄胜贤' },
+      { title: '资料收集', desc: '班级表单收集与数据管理', tech: '表单 + 数据', owner: '黄胜贤' },
       { title: 'AI 写作助手', desc: '通知、总结等文档一键生成', tech: 'LLM 文档生成', owner: '黄锦浩' },
       { title: '任务管理', desc: '看板式任务管理 + AI 优先级排序', tech: '看板 + Agent', owner: '黄锦浩' },
-      { title: '数据统计', desc: '收集数据仪表盘与一键导出', tech: '仪表盘 + 导出', owner: '黄圣贤' },
+      { title: '数据统计', desc: '收集数据仪表盘与一键导出', tech: '仪表盘 + 导出', owner: '黄胜贤' },
     ],
   },
 ]

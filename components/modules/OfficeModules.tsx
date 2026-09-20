@@ -3,6 +3,9 @@ import stats from '@/lib/data/kb-stats.json'
 import EChart from './EChart'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
+// GitHub Pages 导出时的子路径前缀（本地/Vercel 为空串）
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 // 平台数据资产统计（真实计数：提取自三班平台 index.html 各数据数组 + cet4.json）
 const ASSETS = [
   { name: '四级词库', value: stats.cet4Words as number },
@@ -77,7 +80,7 @@ export default function OfficeModules() {
               <p className="mt-1 text-xs text-slate-400">9/13 笃行楼501 · 实到 30 人 · 请假/安全/考勤/学风</p>
             </div>
             <a
-              href="/meeting1.html"
+              href={`${BASE}/meeting1.html`}
               className="shrink-0 rounded-lg border border-white/20 px-3 py-1.5 text-xs text-slate-100 hover:bg-white/10"
             >
               查看 →

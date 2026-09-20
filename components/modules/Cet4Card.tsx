@@ -7,6 +7,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const PROG_KEY = 'cet4_progress_v1'
 const STATS_KEY = 'cet4_stats_v1'
 const TOTAL = 3320 // cet4.json 实际词数
+// GitHub Pages 导出时的子路径前缀（本地/Vercel 为空串）
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 // 四级词汇卡：SVG 进度环可视化（已学/已掌握），点击进入三班平台同款 3D 翻卡打卡页
 export default function Cet4Card() {
@@ -59,7 +61,7 @@ export default function Cet4Card() {
             剩余 {Math.max(0, TOTAL - learned)} 词
           </p>
           <a
-            href="/cet4.html"
+            href={`${BASE}/cet4.html`}
             className="mt-2 inline-block rounded-lg bg-cyan-500/90 px-3 py-1.5 text-xs font-medium text-slate-950 hover:bg-cyan-400"
           >
             进入打卡 →

@@ -1,0 +1,1047 @@
+{
+ "tableName": "阳光学院",
+ "school": "阳光学院",
+ "startDate": "2026-09-07",
+ "maxWeek": 20,
+ "nodes": 20,
+ "timeSlots": [
+  {
+   "node": 1,
+   "start": "08:00",
+   "end": "08:50"
+  },
+  {
+   "node": 2,
+   "start": "09:00",
+   "end": "09:50"
+  },
+  {
+   "node": 3,
+   "start": "10:10",
+   "end": "11:00"
+  },
+  {
+   "node": 4,
+   "start": "11:10",
+   "end": "12:00"
+  },
+  {
+   "node": 5,
+   "start": "13:30",
+   "end": "14:20"
+  },
+  {
+   "node": 6,
+   "start": "14:30",
+   "end": "15:20"
+  },
+  {
+   "node": 7,
+   "start": "15:40",
+   "end": "16:30"
+  },
+  {
+   "node": 8,
+   "start": "16:40",
+   "end": "17:30"
+  },
+  {
+   "node": 9,
+   "start": "18:30",
+   "end": "19:20"
+  },
+  {
+   "node": 10,
+   "start": "19:30",
+   "end": "20:20"
+  },
+  {
+   "node": 11,
+   "start": "20:30",
+   "end": "21:20"
+  },
+  {
+   "node": 12,
+   "start": "21:25",
+   "end": "21:30"
+  },
+  {
+   "node": 13,
+   "start": "21:35",
+   "end": "21:40"
+  },
+  {
+   "node": 14,
+   "start": "21:45",
+   "end": "21:50"
+  },
+  {
+   "node": 15,
+   "start": "21:55",
+   "end": "22:00"
+  },
+  {
+   "node": 16,
+   "start": "22:05",
+   "end": "22:10"
+  },
+  {
+   "node": 17,
+   "start": "22:15",
+   "end": "22:20"
+  },
+  {
+   "node": 18,
+   "start": "22:25",
+   "end": "22:30"
+  },
+  {
+   "node": 19,
+   "start": "22:35",
+   "end": "22:40"
+  },
+  {
+   "node": 20,
+   "start": "22:45",
+   "end": "22:50"
+  }
+ ],
+ "courses": [
+  {
+   "name": "计算机导论",
+   "teacher": "孙桂鸿",
+   "room": "笃行楼（原A2）(笃行楼402（滨海原A2）)",
+   "day": 1,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "weeksStr": "第8-18周"
+  },
+  {
+   "name": "计算机导论",
+   "teacher": "孙桂鸿",
+   "room": "笃行楼（原A2）(笃行楼402（滨海原A2）)",
+   "day": 1,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "weeksStr": "第1-4周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼107（滨海原A1）)",
+   "day": 1,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "weeksStr": "第1-4周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼107（滨海原A1）)",
+   "day": 1,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "weeksStr": "第8-16周"
+  },
+  {
+   "name": "创意与创新",
+   "teacher": "王苹",
+   "room": "笃行楼（原A2）(笃行楼404（滨海原A2）)",
+   "day": 1,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "weeksStr": "第8-18周"
+  },
+  {
+   "name": "创意与创新",
+   "teacher": "王苹",
+   "room": "笃行楼（原A2）(笃行楼404（滨海原A2）)",
+   "day": 1,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    4
+   ],
+   "weeksStr": "第4周"
+  },
+  {
+   "name": "新时代实践教育",
+   "teacher": "陈晨",
+   "room": "笃行楼（原A2）(笃行楼401（滨海原A2）)",
+   "day": 1,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    3
+   ],
+   "weeksStr": "第3周"
+  },
+  {
+   "name": "体育(一)",
+   "teacher": "欧阳吉华",
+   "room": "滨海操场(线上)",
+   "day": 1,
+   "startNode": 7,
+   "span": 2,
+   "startTime": "15:40",
+   "endTime": "17:30",
+   "weeks": [
+    19,
+    20
+   ],
+   "weeksStr": "第19-20周"
+  },
+  {
+   "name": "体育(一)",
+   "teacher": "欧阳吉华",
+   "room": "滨海操场(滨海B区操场)",
+   "day": 1,
+   "startNode": 7,
+   "span": 2,
+   "startTime": "15:40",
+   "endTime": "17:30",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "weeksStr": "第8-18周"
+  },
+  {
+   "name": "体育(一)",
+   "teacher": "欧阳吉华",
+   "room": "滨海操场(滨海B区操场)",
+   "day": 1,
+   "startNode": 7,
+   "span": 2,
+   "startTime": "15:40",
+   "endTime": "17:30",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "weeksStr": "第1-4周"
+  },
+  {
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "teacher": "金莉",
+   "room": "笃行楼（原A2）(笃行楼501（滨海原A2）)",
+   "day": 2,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "weeksStr": "第1-4周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(计算机基础实验室V(笃行楼208))",
+   "day": 2,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    15,
+    16,
+    17,
+    18
+   ],
+   "weeksStr": "第15-18周"
+  },
+  {
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "teacher": "金莉",
+   "room": "笃行楼（原A2）(笃行楼501（滨海原A2）)",
+   "day": 2,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "weeksStr": "第8-14周"
+  },
+  {
+   "name": "军事理论",
+   "teacher": "王春峰",
+   "room": "博学楼（原A1)(博学楼301（滨海原A1）)",
+   "day": 2,
+   "startNode": 7,
+   "span": 2,
+   "startTime": "15:40",
+   "endTime": "17:30",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "weeksStr": "第8-17周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼107（滨海原A1）)",
+   "day": 3,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "weeksStr": "第8-16周"
+  },
+  {
+   "name": "计算机导论",
+   "teacher": "孙桂鸿",
+   "room": "笃行楼（原A2）(笃行楼404（滨海原A2）)",
+   "day": 3,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    17
+   ],
+   "weeksStr": "第17周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼107（滨海原A1）)",
+   "day": 3,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "weeksStr": "第1-4周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 3,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "weeksStr": "第1-4周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 3,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "weeksStr": "第8-17周"
+  },
+  {
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "teacher": "金莉",
+   "room": "笃行楼（原A2）(笃行楼501（滨海原A2）)",
+   "day": 3,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    4
+   ],
+   "weeksStr": "第4周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    2
+   ],
+   "weeksStr": "第2周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    15
+   ],
+   "weeksStr": "第15周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    1
+   ],
+   "weeksStr": "第1周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    10
+   ],
+   "weeksStr": "第10周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    8
+   ],
+   "weeksStr": "第8周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    5
+   ],
+   "weeksStr": "第5周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    16
+   ],
+   "weeksStr": "第16周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    12
+   ],
+   "weeksStr": "第12周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    9
+   ],
+   "weeksStr": "第9周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    3
+   ],
+   "weeksStr": "第3周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    14
+   ],
+   "weeksStr": "第14周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    13
+   ],
+   "weeksStr": "第13周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    18
+   ],
+   "weeksStr": "第18周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    11
+   ],
+   "weeksStr": "第11周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "博学楼（原A1)(博学楼406（滨海原A1）)",
+   "day": 4,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    17
+   ],
+   "weeksStr": "第17周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼201（滨海原A1）)",
+   "day": 4,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    10
+   ],
+   "weeksStr": "第10周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼201（滨海原A1）)",
+   "day": 4,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    12
+   ],
+   "weeksStr": "第12周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼201（滨海原A1）)",
+   "day": 4,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    2
+   ],
+   "weeksStr": "第2周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼201（滨海原A1）)",
+   "day": 4,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    14
+   ],
+   "weeksStr": "第14周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼201（滨海原A1）)",
+   "day": 4,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    8
+   ],
+   "weeksStr": "第8周"
+  },
+  {
+   "name": "人工智能技术与应用",
+   "teacher": "谢雪峰",
+   "room": "笃行楼（原A2）(计算机基础实验室I(笃行楼202))",
+   "day": 4,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    5
+   ],
+   "weeksStr": "第5周"
+  },
+  {
+   "name": "人工智能技术与应用",
+   "teacher": "谢雪峰",
+   "room": "笃行楼（原A2）(计算机基础实验室I(笃行楼202))",
+   "day": 4,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "weeksStr": "第8-15周"
+  },
+  {
+   "name": "人工智能技术与应用",
+   "teacher": "谢雪峰",
+   "room": "笃行楼（原A2）(计算机基础实验室I(笃行楼202))",
+   "day": 4,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "weeksStr": "第1-3周"
+  },
+  {
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "teacher": "金莉",
+   "room": "笃行楼（原A2）(笃行楼501（滨海原A2）)",
+   "day": 4,
+   "startNode": 7,
+   "span": 2,
+   "startTime": "15:40",
+   "endTime": "17:30",
+   "weeks": [
+    5
+   ],
+   "weeksStr": "第5周"
+  },
+  {
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "teacher": "金莉",
+   "room": "笃行楼（原A2）(笃行楼501（滨海原A2）)",
+   "day": 4,
+   "startNode": 7,
+   "span": 2,
+   "startTime": "15:40",
+   "endTime": "17:30",
+   "weeks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "weeksStr": "第8-14周"
+  },
+  {
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "teacher": "金莉",
+   "room": "笃行楼（原A2）(笃行楼501（滨海原A2）)",
+   "day": 4,
+   "startNode": 7,
+   "span": 2,
+   "startTime": "15:40",
+   "endTime": "17:30",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "weeksStr": "第1-3周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房II(笃行楼303))",
+   "day": 5,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    11
+   ],
+   "weeksStr": "第11周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房II(笃行楼303))",
+   "day": 5,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    13
+   ],
+   "weeksStr": "第13周"
+  },
+  {
+   "name": "新时代实践教育",
+   "teacher": "陈晨",
+   "room": "()",
+   "day": 5,
+   "startNode": 1,
+   "span": 8,
+   "startTime": "08:00",
+   "endTime": "17:30",
+   "weeks": [
+    5
+   ],
+   "weeksStr": "第5周"
+  },
+  {
+   "name": "新时代实践教育",
+   "teacher": "陈晨",
+   "room": "博学楼（原A1)(博学楼314（滨海原A1）)",
+   "day": 5,
+   "startNode": 1,
+   "span": 6,
+   "startTime": "08:00",
+   "endTime": "15:20",
+   "weeks": [
+    8
+   ],
+   "weeksStr": "第8周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房II(笃行楼303))",
+   "day": 5,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    1
+   ],
+   "weeksStr": "第1周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房II(笃行楼303))",
+   "day": 5,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    9
+   ],
+   "weeksStr": "第9周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房II(笃行楼303))",
+   "day": 5,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    15
+   ],
+   "weeksStr": "第15周"
+  },
+  {
+   "name": "大学英语（一）",
+   "teacher": "钟桂玲",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 5,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    15
+   ],
+   "weeksStr": "第15周"
+  },
+  {
+   "name": "高等数学A（一）",
+   "teacher": "张敏华",
+   "room": "博学楼（原A1)(博学楼107（滨海原A1）)",
+   "day": 6,
+   "startNode": 1,
+   "span": 2,
+   "startTime": "08:00",
+   "endTime": "09:50",
+   "weeks": [
+    5
+   ],
+   "weeksStr": "第5周"
+  },
+  {
+   "name": "高级语言程序设计",
+   "teacher": "黄飞雄",
+   "room": "笃行楼（原A2）(公共语音机房IV(笃行楼314))",
+   "day": 6,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    5
+   ],
+   "weeksStr": "第5周"
+  },
+  {
+   "name": "创意与创新",
+   "teacher": "王苹",
+   "room": "滨海操场(线上)",
+   "day": 6,
+   "startNode": 9,
+   "span": 4,
+   "startTime": "18:30",
+   "endTime": "21:30",
+   "weeks": [
+    1,
+    2
+   ],
+   "weeksStr": "第1-2周"
+  },
+  {
+   "name": "体育(一)",
+   "teacher": "欧阳吉华",
+   "room": "滨海操场(滨海B区操场)",
+   "day": 7,
+   "startNode": 3,
+   "span": 2,
+   "startTime": "10:10",
+   "endTime": "12:00",
+   "weeks": [
+    10
+   ],
+   "weeksStr": "第10周"
+  },
+  {
+   "name": "习近平新时代中国特色社会主义思想概论",
+   "teacher": "金莉",
+   "room": "笃行楼（原A2）(笃行楼501（滨海原A2）)",
+   "day": 7,
+   "startNode": 5,
+   "span": 2,
+   "startTime": "13:30",
+   "endTime": "15:20",
+   "weeks": [
+    2
+   ],
+   "weeksStr": "第2周"
+  }
+ ]
+}

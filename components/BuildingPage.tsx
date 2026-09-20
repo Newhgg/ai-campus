@@ -11,8 +11,8 @@ const THEMES: Record<BuildingId, { bg: string; text: string }> = {
   office: { bg: 'from-emerald-500/20', text: 'text-emerald-300' },
 }
 
-// 楼层页通用骨架：头部横幅 + 功能卡片网格（数据全部来自 lib/campus-config.ts）
-export default function BuildingPage({ id }: { id: BuildingId }) {
+// 楼层页通用骨架：头部横幅 + 功能卡片网格 + 模块区（children，导入自三班平台的可视化模块）
+export default function BuildingPage({ id, children }: { id: BuildingId; children?: React.ReactNode }) {
   const b = BUILDINGS.find((x) => x.id === id)
   if (!b) return null
   const theme = THEMES[id]
@@ -52,6 +52,14 @@ export default function BuildingPage({ id }: { id: BuildingId }) {
           </Card>
         ))}
       </section>
+
+      {/* 模块区：从三班平台导入的可视化模块 */}
+      {children && (
+        <section className="mt-8">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">已导入模块 · 来自三班平台</h2>
+          {children}
+        </section>
+      )}
 
       <p className="mt-6 text-center text-xs text-slate-500">
         功能页为 W1 骨架占位，按 8 周任务卡逐步实装

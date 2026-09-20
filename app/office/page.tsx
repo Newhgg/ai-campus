@@ -1,6 +1,11 @@
 import BuildingPage from '@/components/BuildingPage'
+import OfficeModules from '@/components/modules/OfficeModules'
 
-// 🏢 办公楼：通知中心 + 资料收集 + AI 写作（黄圣贤主责数据）
+// 🏢 办公楼：通知流 + 数据资产统计 + 班会记录（数据来自三班平台/飞书）
 export default function OfficePage() {
-  return <BuildingPage id="office" />
+  return (
+    <BuildingPage id="office">
+      <OfficeModules />
+    </BuildingPage>
+  )
 }

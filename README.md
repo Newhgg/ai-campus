@@ -38,6 +38,9 @@ components/
 ├── BuildingPage.tsx      ← 楼层页通用骨架
 └── ui/                   ← shadcn/ui 风格组件（button / card / badge）
 lib/campus-config.ts      ← 三栋楼单一数据源（3D/首页/楼层页共用）
+lib/data/                 ← 三班平台导入的真实数据（课表59节/每日一题31/通知/词库统计）
+components/modules/       ← 平台导入的可视化模块（课表/ECharts/每日一题/四级进度环/公告/生活指南）
+public/                   ← 平台静态页直移（cet4.html 四级打卡 / meeting1.html 班会记录）
 store/useAppStore.ts      ← Zustand 全局状态
 ```
 
